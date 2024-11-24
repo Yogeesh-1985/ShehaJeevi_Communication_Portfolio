@@ -1,11 +1,11 @@
 /* Sidebar Styling */
 #mobile-sidebar {
     height: 100%; /* Full height of the viewport */
-    width: 250px; /* Sidebar width */
+    width: 210px; /* Sidebar width */
     position: fixed; /* Fixed position */
     top: 0;
     left: -250px; /* Initially off-screen */
-    background-color: #F0F0F0; /* Light gray background */
+    background-color: #E6E6FA; /* Lavender background color */
     overflow-y: auto; /* Enable scrolling if the content overflows */
     transition: left 0.3s ease-in-out; /* Smooth transition when toggling */
     z-index: 1000; /* Ensure it appears above other elements */
@@ -25,8 +25,9 @@
 }
 
 #mobile-sidebar li {
-    padding: 15px;
+    padding: 10px;
     text-align: left;
+    border-bottom: none;
 }
 
 #mobile-sidebar a {
@@ -35,7 +36,7 @@
     font-size: 20px; /* Increased font size for better visibility */
     display: block;
     transition: 0.3s;
-    background-color: #F0F0F0; /* Match the sidebar background */
+    background-color: #E6E6FA; /* Match the sidebar background */
 }
 
 #mobile-sidebar a:hover {
@@ -59,11 +60,22 @@
     top: 10px;
     left: 10px;
     z-index: 1100; /* Above the sidebar */
-    margin-bottom: 5px;
+    margin-botton:5px;
 }
 
 #menu-toggle:hover {
     background-color: #E6E6FA; /* Match the sidebar background on hover */
+}
+
+/* Prevent Horizontal Scrolling */
+html, body {
+    margin-top: 20px;
+    margin-right: 20px; /* Ensure proper space on the right */
+    padding: 0;
+    overflow-x: hidden; /* Prevent white space caused by sidebar */
+    font-family:'Times New Roman', Times, serif;
+    word-wrap: break-word; /* Break words when necessary */
+    overflow-wrap: break-word; 
 }
 
 /* Main Content */
@@ -77,9 +89,30 @@
     line-height: 1.6; /* Better line spacing for readability */
 }
 
+/* Responsive Styling for Tablets */
+@media only screen and (max-width: 768px) {
+    /* Mobile Sidebar (Only Active on Smaller Screens) */
+    #sidebar-nav {
+        display: none; /* Hide desktop sidebar on mobile */
+    }
+
+    #main-content {
+        padding: 10px; 
+        margin-left: 0; /* Full width */
+        width: 100%;
+        font-size: 16px; /* Slightly smaller font size for tablets */
+    }
+
+    /* Mobile Menu Toggle */
+    #menu-toggle {
+        display: block; /* Make toggle button visible on small screens */
+        font-size: 18px; /* Adjust toggle button font size for tablets */
+    }
+}
+
 /* Responsive Styling for Phones */
 @media only screen and (max-width: 480px) {
-    #mobile-sidebar {
+    #sidebar-nav {
         width: 100%; /* Sidebar takes full width */
         height: auto; /* Auto height for better scrolling on mobile */
         position: relative; /* No fixed positioning for better flow */
@@ -94,7 +127,7 @@
         font-size: 16px; /* Smaller font size for phones */
     }
 
-    #mobile-sidebar ul li a {
+    #sidebar-nav ul li a {
         font-size: 16px; /* Adjust font size for sidebar links on smaller screens */
         padding: 10px 15px; /* Reduce padding for links on smaller screens */
     }
