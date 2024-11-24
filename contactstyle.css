@@ -93,6 +93,7 @@ body {
   border: none; /* Remove default iframe border */
 }
 
+/* For tablets and below (max-width 768px) */
 @media (max-width: 768px) {
   .imp-container {
     gap: 50px; /* Reduce gap between circles */
@@ -126,6 +127,8 @@ body {
   .imp-container {
     flex-direction: column; /* Stack items vertically */
     gap: 30px; /* Reduce gap further */
+    align-items: center; /* Center items horizontally */
+    padding: 10px;
   }
 
   .imp {
@@ -146,6 +149,10 @@ body {
     height: 250px; /* Further adjust map height */
   }
 
+  p {
+    font-size: 14px; /* Smaller paragraph font size */
+  }
+}
   p {
     font-size: 14px; /* Smaller paragraph font size */
   }
