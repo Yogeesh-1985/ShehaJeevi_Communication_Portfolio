@@ -1,11 +1,13 @@
-body{
-  margin-top: auto;
-  color:white;
+body {
+  margin: 0;
+  padding: 0;
+  color: white;
   text-align: center;
   padding-top: 80px;
+  background-color: #000; /* Add a background color for better visibility */
 }
 
-p{
+p {
   font-size: 18px;
   line-height: 1.5;
 }
@@ -15,6 +17,7 @@ p{
   justify-content: space-around; 
   align-items: center; 
   margin: 20px auto; 
+  flex-wrap: wrap; /* Ensure wrapping on smaller screens */
 }
 
 .service {
@@ -26,12 +29,14 @@ p{
   background-color: #1f1f1f;
   border-radius: 8px;
   margin: 10px; 
+  transition: background-color 0.3s ease; /* Smooth hover effect */
 }
 
-.service:hover{
+.service:hover {
   background-color: #e7003a;
 }
 
+/* Animations */
 @keyframes slideInLeftToRight {
   0% {
       transform: translateX(-100%);
@@ -64,25 +69,12 @@ p{
   position: relative;
 }
 
-@media (max-width: 768px) {
-  p{
-    font-size: 15px;
-  line-height: 1.5;
-  }
-  .service-container {
-    flex-direction: column; 
-    align-items: center; 
-  }
+/* Responsive Styles */
 
-  .service {
-    max-width: 100%; 
-    margin-bottom: 20px; 
-  }
-}
 /* For tablets (screen width 768px and below) */
 @media (max-width: 768px) {
   p {
-    font-size: 15px; /* Smaller font for text */
+    font-size: 15px;
     line-height: 1.5;
   }
 
@@ -92,27 +84,30 @@ p{
   }
 
   .service {
-    max-width: 90%; /* Adjust width to fit smaller screens */
-    margin-bottom: 20px; /* Add spacing between items */
+    max-width: 90%; /* Adjust width for smaller screens */
+    margin-bottom: 20px;
+    height: auto; /* Adapt height to content */
   }
 }
 
 /* For phones (screen width 480px and below) */
 @media (max-width: 480px) {
   p {
-    font-size: 14px; /* Further reduce font size for smaller devices */
-    line-height: 1.4; /* Adjust line height */
+    font-size: 14px; /* Smaller font for readability */
+    line-height: 1.4;
   }
 
   .service-container {
     flex-direction: column; /* Continue stacking items vertically */
     align-items: center;
     gap: 15px; /* Add spacing between items */
+    padding: 10px; /* Add padding for smaller screens */
   }
 
   .service {
-    max-width: 100%; /* Take full width of the screen */
-    padding: 15px; /* Increase padding for better readability */
-    height: auto; /* Adjust height for content */
+    max-width: 100%; /* Use full width of the screen */
+    padding: 15px; /* Increase padding */
+    height: auto; /* Adjust height to content */
+    text-align: center;
   }
 }
