@@ -1,0 +1,179 @@
+body {
+  background-color: #F5F5F5;
+  background-image: url("BackGround.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  margin:20px;
+  line-height: 1.5;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.parent {
+  text-align: center;
+  color:#F5F5F5;
+}
+
+#broadband {
+  /*background-color: #b5c8d4; */
+  background-image: url(banner1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex; 
+  align-items:center; 
+  justify-content: space-between; 
+  padding: 10px 20px; 
+  position: fixed; 
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+  z-index: 100; 
+}
+
+#broadband img {
+  width: 60px; 
+  height: 60px; 
+  object-fit: contain; 
+  margin-right: 10px;
+}
+
+#bsnl {
+  width: 60px; 
+  height: 60px;
+  transform: scale(1.44); 
+}
+
+#mainlogo {
+  margin: auto;
+  margin-top: 10px;
+  width: 40%;
+  display: block;
+  border: none;
+  padding: 5px;
+  height: auto;
+}
+
+.image-resize {
+  animation: grow 0.9s forwards ease 1s; 
+}
+
+@keyframes grow {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0; 
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1; 
+  }
+}
+
+#mainlogo{
+  animation: grow 0.9s ease-out !important;
+}
+
+.menu {
+  display:flex;
+  gap: 20px;
+  word-spacing: 30px;
+  margin-left: 67%;
+  text-transform: uppercase;
+  margin-right: auto;
+}
+
+.menu a:link {
+  color: #F5F5F5;
+  text-decoration: none;
+}
+
+.menu a:visited {
+  color: floralwhite;
+  text-decoration: underline; 
+}
+
+.menu a:hover {
+  color: rgb(255, 244, 199);
+  background-color: rgba(179, 179, 179, 0.8);
+  border: 1px solid rgba(196, 196, 196, 0.7);
+  padding:2px;
+  border-radius: 2px;
+}
+
+.menu a:active {
+  color: floralwhite;
+  text-decoration: underline;
+}
+
+.name{
+  color:red;
+}
+
+.maincontent{
+  color:#F5F5F5
+}
+
+
+/* Styles for tablets (screen width 768px and below) */
+@media (max-width: 768px) {
+  #broadband {
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .menu {
+    display: block;
+    text-align: center;
+    word-spacing: 15px;
+    margin: 10px 0;
+  }
+
+  #mainlogo {
+    width: 60%;
+    margin: 20px auto;
+  }
+
+  .parent h1, .parent h2 {
+    font-size: 1.4rem;
+    line-height: 1.8;
+  }
+
+  .maincontent p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Styles for phones (screen width 480px and below) */
+@media (max-width: 480px) {
+  #broadband {
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .menu {
+    display: block;
+    text-align: center;
+    word-spacing: 10px;
+    margin: 10px 0;
+  }
+
+  .menu a {
+    display: block;
+    margin: 5px 0;
+  }
+
+  #mainlogo {
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  .parent h1, .parent h2 {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+
+  .maincontent p {
+    font-size: 0.8rem;
+  }
+}

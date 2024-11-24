@@ -1,0 +1,118 @@
+body{
+  margin-top: auto;
+  color:white;
+  text-align: center;
+  padding-top: 80px;
+}
+
+p{
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.service-container {
+  display: flex; 
+  justify-content: space-around; 
+  align-items: center; 
+  margin: 20px auto; 
+}
+
+.service {
+  max-width: 300px;
+  border: 1px solid #1f1f1f;
+  height: 200px;
+  padding: 10px;
+  text-align: center;
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  margin: 10px; 
+}
+
+.service:hover{
+  background-color: #e7003a;
+}
+
+@keyframes slideInLeftToRight {
+  0% {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+@keyframes slideInRightToLeft {
+  0% {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+.about {
+  animation: slideInLeftToRight 1.3s ease-out forwards !important;
+  position: relative;
+}
+
+.why {
+  animation: slideInRightToLeft 1.3s ease-out forwards !important;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  p{
+    font-size: 15px;
+  line-height: 1.5;
+  }
+  .service-container {
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  .service {
+    max-width: 100%; 
+    margin-bottom: 20px; 
+  }
+}
+/* For tablets (screen width 768px and below) */
+@media (max-width: 768px) {
+  p {
+    font-size: 15px; /* Smaller font for text */
+    line-height: 1.5;
+  }
+
+  .service-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+  }
+
+  .service {
+    max-width: 90%; /* Adjust width to fit smaller screens */
+    margin-bottom: 20px; /* Add spacing between items */
+  }
+}
+
+/* For phones (screen width 480px and below) */
+@media (max-width: 480px) {
+  p {
+    font-size: 14px; /* Further reduce font size for smaller devices */
+    line-height: 1.4; /* Adjust line height */
+  }
+
+  .service-container {
+    flex-direction: column; /* Continue stacking items vertically */
+    align-items: center;
+    gap: 15px; /* Add spacing between items */
+  }
+
+  .service {
+    max-width: 100%; /* Take full width of the screen */
+    padding: 15px; /* Increase padding for better readability */
+    height: auto; /* Adjust height for content */
+  }
+}
