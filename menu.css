@@ -1,0 +1,72 @@
+/* Hide the desktop menu on smaller screens */
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none; /* Hide desktop menu on small screens */
+    }
+}
+
+/* Mobile Menu Toggle Button */
+#menu-toggle {
+    display: none; /* Hidden by default for desktops */
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1001; /* Ensure it's above other elements */
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block; /* Show toggle button on small screens */
+    }
+}
+
+/* Mobile Sidebar */
+#mobile-sidebar {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 20px;
+    z-index: 999; /* Behind the toggle button but above other elements */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile Sidebar List */
+#mobile-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+#mobile-sidebar li {
+    margin: 20px 0;
+}
+
+#mobile-sidebar a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* Mobile Sidebar Icons */
+#mobile-sidebar .menu-icon {
+    height: 24px;
+    width: 24px;
+    margin-right: 10px;
+}
