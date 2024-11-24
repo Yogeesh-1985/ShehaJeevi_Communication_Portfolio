@@ -39,6 +39,27 @@ p {
 .service:hover {
   background-color: #e7003a;
 }
+@keyframes slideInLeftToRight {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0; 
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1; 
+  }
+}
+
+@keyframes slideInRightToLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0; 
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1; 
+  }
+}
 
 /* Animations */
 .about {
