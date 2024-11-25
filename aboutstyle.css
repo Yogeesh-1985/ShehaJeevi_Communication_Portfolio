@@ -1,21 +1,19 @@
-/* Global Styles */
 body {
   margin: 0;
   padding: 0;
   color: white;
   text-align: center;
-  padding-top: 60px; /* Adjusted to avoid extra space */
-  background-color: #000; /* Background for better visibility */
-  overflow-x: hidden; /* Prevent horizontal scroll on small screens */
+  padding-top: 60px; 
+  background-color: #000; 
+  overflow-x: hidden; 
 }
 
 p {
   font-size: 18px;
   line-height: 1.5;
-  padding: 0 10px; /* Add padding for better readability on smaller screens */
+  padding: 0 10px; 
 }
 
-/* Service Container */
 .service-container {
   display: flex; 
   justify-content: space-around; 
@@ -61,7 +59,6 @@ p {
   }
 }
 
-/* Animations */
 .about {
   animation: slideInLeftToRight 1.3s ease-out forwards;
   position: relative;
@@ -101,14 +98,20 @@ p {
     margin-bottom: 20px;
     padding: 20px; /* Increase padding for better content spacing */
   }
-
   .about {
-    animation: none; /* Disable animations for smoother mobile experience */
+    animation: slideInLeftToRight 1s ease-out forwards; /* Simplified animation */
     margin: 10px auto;
     padding: 10px;
     text-align: center;
   }
+
+  .why {
+    animation: slideInRightToLeft 1s ease-out forwards; /* Simplified animation */
+    padding: 10px;
+    margin: 10px auto;
+  }
 }
+
 
 /* Phones (480px and below) */
 @media (max-width: 480px) {
@@ -135,11 +138,18 @@ p {
     text-align: center;
     height: auto; /* Adapt height to content */
   }
-
+  
   .about {
+    animation: slideInLeftToRight 1s ease-out forwards; /* Keep animation */
     margin: 5px auto; /* Reduce top/bottom margins */
     padding: 10px; /* Adjust padding */
     text-align: center;
     font-size: 16px; /* Scale font size down */
+  }
+
+  .why {
+    animation: slideInRightToLeft 1s ease-out forwards; /* Keep animation */
+    margin: 5px auto;
+    padding: 10px;
   }
 }
