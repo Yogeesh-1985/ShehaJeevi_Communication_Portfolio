@@ -14,8 +14,8 @@ body {
 }
 
 #broadband {
-  /*background-color: #b5c8d4; */
-  background-image: url(banner1.jpg);
+  background-color: #b5c8d4; 
+  /*background-image: url(banner1.jpg);*/
   background-repeat: no-repeat;
   background-size: cover;
   display: flex; 
@@ -82,25 +82,25 @@ body {
 }
 
 .menu a:link {
-  color: #F5F5F5;
+  color: #000000;
   text-decoration: none;
 }
 
 .menu a:visited {
-  color: floralwhite;
+  color: #004d40;
   text-decoration: underline; 
 }
 
 .menu a:hover {
   color: rgb(255, 244, 199);
-  background-color: rgba(179, 179, 179, 0.8);
-  border: 1px solid rgba(196, 196, 196, 0.7);
+  background-color: rgba(167, 165, 165, 0.8);
+  border: 1px solid rgba(167, 165, 165, 0.8);
   padding:2px;
   border-radius: 2px;
 }
 
 .menu a:active {
-  color: floralwhite;
+  color: rgb(67, 67, 66);
   text-decoration: underline;
 }
 
