@@ -6,10 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
     <button id="menu-toggle">☰ Menu</button>
     <nav id="mobile-sidebar">
       <ul>
-        <li><a href="index.html"><img src="ONEBroadband.png" class="menu-icon" alt="Logo">Home</a></li>
-        <li><a href="about.html"><img src="ONEBroadband.png" class="menu-icon" alt="Logo">About</a></li>
-        <li><a href="package.html"><img src="ONEBroadband.png" class="menu-icon" alt="Logo">Packages</a></li>
-        <li><a href="contact.html"><img src="ONEBroadband.png" class="menu-icon" alt="Logo">Contact</a></li>
+        <li><a href="index.html"><img src="logo.png" class="menu-icon" alt="Logo">Home</a></li>
+        <li><a href="about.html"><img src="logo.png" class="menu-icon" alt="Logo">About</a></li>
+        <li><a href="package.html"><img src="logo.png" class="menu-icon" alt="Logo">Packages</a></li>
+        <li><a href="contact.html"><img src="logo.png" class="menu-icon" alt="Logo">Contact</a></li>
       </ul>
     </nav>
   `;
